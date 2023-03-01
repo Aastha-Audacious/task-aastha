@@ -18,7 +18,7 @@
         let mydata = document.querySelector("#mydata")
         let num = 0;
         let timerRef;  //to store the value of the setInterval function
-        function startTimer() {
+         startTimer= ()=> {
             mydata.innerHTML = `Loading data...`;  //for loading durnig interval
             timerRef = setInterval(() => {
                 mydata.innerHTML = `I am guessing your lucky number is: ${num}`;
@@ -26,7 +26,7 @@
             }, 1000)
         }
 
-        function stopTimer() { 
+         stopTimer=()=> { 
             clearInterval(timerRef);               //stop the setInterval function
             mydata.innerHTML = `Your number is: ${num}`;   //will return your selected number
         }
