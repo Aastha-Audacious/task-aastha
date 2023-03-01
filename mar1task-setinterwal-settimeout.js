@@ -1,11 +1,11 @@
 // setInterval-clearInterval 
 
-let num =0;
-function printNumber(){
+let num = 0;
+function printNumber() {
     num++;
     console.log(num);
     // to stop at particular time
-    if(num>=5){
+    if (num >= 5) {
         clearInterval(printt);
     }
 }
