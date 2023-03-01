@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setTimeout & setInterval</title>
+</head>
+<body>
+    <h1 id="mydata">What is your lucky number?</h1>
+    <button onclick="startTimer()">Start Timer</button>
+    <button onclick="stoptTimer()">Stop Timer</button>
+
+    <script>
+        let mydata = document.querySelector("#mydata")
+        let num =0;
+        let timerRef;
+        function startTimer(){
+            mydata.innerHTML =`Loading data...`;
+            timerRef = setInterval(()=>{
+            mydata.innerHTML =`I am guessing your lucky number is: ${num}`;
+            num++;
+        },1000)
+        }
+
+        function stoptTimer(){
+            clearInterval(timerRef);
+        }
+    </script>
+</body>
+</html>
