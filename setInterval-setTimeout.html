@@ -9,29 +9,26 @@
 </head>
 
 <body>
-    <h1>
-        <marquee>Welcome to the Game Zone of AP</marquee>
-    </h1>
+    <h1><marquee>Welcome to the Game Zone of AP</marquee></h1>
     <h1 id="mydata">What is your lucky number?</h1>
-    <button onclick="startTimer()">Start Timer</button>
-    <button onclick="stoptTimer()">Stop Timer</button>
+    <button onclick="startTimer()">Start Timer</button>   
+    <button onclick="stopTimer()">Stop Timer</button>
 
     <script>
         let mydata = document.querySelector("#mydata")
         let num = 0;
         let timerRef;  //to store the value of the setInterval function
         function startTimer() {
-            mydata.innerHTML = `Loading data...`;
+            mydata.innerHTML = `Loading data...`;  //for loading durnig interval
             timerRef = setInterval(() => {
                 mydata.innerHTML = `I am guessing your lucky number is: ${num}`;
                 num++;
             }, 1000)
         }
 
-        function stoptTimer() { 
-            clearInterval(timerRef);
-            mydata.innerHTML = `Your number is: ${num}`;
-            //stop the setInterval function
+        function stopTimer() { 
+            clearInterval(timerRef);               //stop the setInterval function
+            mydata.innerHTML = `Your number is: ${num}`;   //will return your selected number
         }
     </script>
 </body>
